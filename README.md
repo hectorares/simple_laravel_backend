@@ -142,6 +142,17 @@ Update as correspond
 
    The application will be available at `http://localhost:8000`.
 
+ you can see customers on : http://127.0.0.1:8000/api/customers
+ and add see it on postman or with curl
+
+ curl -X GET "http://localhost:8000/api/users" -H "Accept: application/json"
+
+ curl -X POST "http://localhost:8000/api/users" \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -d '{"name": "John Doe", "email": "john.doe@example.com", "password": "secret"}'
+
+
 ## Running Tests
 
 You can run the tests using PHPUnit. To do so, use the following command:
