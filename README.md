@@ -150,7 +150,7 @@ Update as correspond
  curl -X POST "http://localhost:8000/api/customers" \
      -H "Accept: application/json" \
      -H "Content-Type: application/json" \
-     -d '{"name": "John Doe", "email": "john.doe@example.com", "password": "secret"}'
+     -d '{"name": "John Doe", "email": "john.doe@example.com"}'
 
 
 ## Running Tests
