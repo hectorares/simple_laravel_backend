@@ -77,7 +77,7 @@ Follow these steps to set up the project locally:
 1. **Clone the repository:**
 
    ```bash
-  git clone https://github.com/hectorares/simple_laravel_backend.git
+   git clone https://github.com/hectorares/simple_laravel_backend.git
    ```
 
 2. **Navigate to the project directory:**
