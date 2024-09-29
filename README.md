@@ -64,3 +64,96 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Laravel Simple Backend
+
+This is a simple Laravel backend project.
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/hectorares/laravel-simple-backend.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd laravel-simple-backend
+   ```
+
+3. **Install dependencies:**
+
+   Make sure you have [Composer](https://getcomposer.org/) installed. Then, run:
+
+   ```bash
+   composer install
+   ```
+
+4. **Set up the environment file:**
+
+   Copy the example `.env` file to create your environment configuration:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+5. **Generate the application key:**
+
+   Run the following command to generate a key for your Laravel application:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Configure your database:**
+
+   Open the `.env` file and configure your database settings (e.g., `DB_HOST`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD`).
+
+7. **Run the migrations:**
+
+   After configuring your database, run the migrations to set up the database schema:
+
+   ```bash
+   php artisan migrate
+   ```
+
+8. **Start the development server:**
+
+   To start the local development server, run:
+
+   ```bash
+   php artisan serve
+   ```
+
+   The application will be available at `http://localhost:8000`.
+
+## Running Tests
+
+You can run the tests using PHPUnit. To do so, use the following command:
+
+```bash
+php artisan test
+```
+
+## Additional Commands
+
+- **Clear application cache:**
+
+  ```bash
+  php artisan cache:clear
+  ```
+
+- **Run database seeders:**
+
+  ```bash
+  php artisan db:seed
+  ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
