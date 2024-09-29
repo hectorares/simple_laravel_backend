@@ -115,12 +115,14 @@ Follow these steps to set up the project locally:
    Open the `.env` file and configure your database settings (e.g., `DB_HOST`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD`).
 
 Update as correspond
+```bash
  DB_CONNECTION=mysql
  DB_HOST=127.0.0.1
  DB_PORT=3306
  DB_DATABASE=laravel
  DB_USERNAME=root
  DB_PASSWORD=
+ ```
 
 7. **Run the migrations:**
 
