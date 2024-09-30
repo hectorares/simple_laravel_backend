@@ -192,18 +192,18 @@ add new field
 
  2.- On file app/Http/Controllers/CustomerController.php add new field
       ```bash
-        $validatedData = $request->validate([
+      $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:customers,email', // Add last_name
             'last_name' => 'required|string|max:255',
-        ]);
+      ]);
       ```
 
 
 3.- On file app/Models/Customer.php add new field
  ```bash
-    protected $fillable = ['name', 'email', 'last_name']; // Add last_name
-```
+ protected $fillable = ['name', 'email', 'last_name']; // Add last_name
+ ```
 
 
 4.- 

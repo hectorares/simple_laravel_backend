@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name');  // Add name column
+            $table->string('last_name');  // Add last_name column
             $table->string('email')->unique();  // Add email column and make it unique
             $table->timestamps();
         });
