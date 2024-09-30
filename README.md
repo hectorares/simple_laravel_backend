@@ -183,23 +183,39 @@ Example: add last_name
 
 1.- On file database/migrations/2024_09_29_210211_create_customers_table.php
 add new field
- $table->string('name');  
- $table->string('last_name');  // Add last_name column
- $table->string('email')->unique();  
+  ```bash
+   $table->string('name');  
+   $table->string('last_name');  // Add last_name column
+   $table->string('email')->unique(); 
+  ```
+
 
  2.- On file app/Http/Controllers/CustomerController.php add new field
+      ```bash
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:customers,email', // Add last_name
             'last_name' => 'required|string|max:255',
         ]);
+      ```
+
 
 3.- On file app/Models/Customer.php add new field
+ ```bash
     protected $fillable = ['name', 'email', 'last_name']; // Add last_name
+```
 
-4.- php artisan migrate:rollback (Se borraran los datos de la tabla)
 
-5.- php artisan migrate (Se creara la tabla con los nuevos campos)
+4.- 
+```bash
+php artisan migrate:rollback 
+```
+Nota: Se borraran los datos de la tabla
+
+5.-
+ ```bash
+ php artisan migrate (Se creara la tabla con los nuevos campos)
+```
 
 
 
