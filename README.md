@@ -214,9 +214,9 @@ Nota: Se borraran los datos de la tabla
 
 5.-
  ```bash
- php artisan migrate (Se creara la tabla con los nuevos campos)
+ php artisan migrate 
 ```
-
+Se creara la tabla con los nuevos campos
 
 
 ## License
