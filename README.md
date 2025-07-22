@@ -7,6 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel Simple Backend
+
+## What is this for?
+
+This is a **simple Laravel-based REST API backend** for customer management, designed for:
+- 🎓 **Learning** Laravel and REST API development
+- 🚀 **Prototyping** new applications quickly  
+- 🔧 **Starting point** for larger customer management systems
+- 📱 **Backend** for mobile apps or frontend frameworks
+
+**Quick overview:** Provides API endpoints to create and retrieve customers with basic validation. Perfect for understanding Laravel fundamentals or jump-starting your next project.
+
+👉 **For detailed explanation, see [WHAT_IS_THIS.md](WHAT_IS_THIS.md)**
+
+---
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -142,18 +158,35 @@ Update as correspond
 
    The application will be available at `http://localhost:8000`.
 
- you can see customers on : http://127.0.0.1:8000/api/customers
- and add see it on postman or with curl
- ```bash
- curl -X GET "http://localhost:8000/api/customers" -H "Accept: application/json"
- ```
+## API Endpoints
 
- ```bash
- curl -X POST "http://localhost:8000/api/customers" \
-     -H "Accept: application/json" \
-     -H "Content-Type: application/json" \
-     -d '{"name": "John Doess", "email": "john.doesss@example.com"}'
+Once the server is running, you can access these endpoints:
+
+### Health Check
+```bash
+curl -X GET "http://localhost:8000/api/ping"
+# Response: {"message": "pong"}
 ```
+
+### Customer Management
+
+**Get all customers:**
+```bash
+curl -X GET "http://localhost:8000/api/customers" -H "Accept: application/json"
+```
+
+**Create a new customer:**
+```bash
+curl -X POST "http://localhost:8000/api/customers" \
+    -H "Accept: application/json" \
+    -H "Content-Type: application/json" \
+    -d '{"name": "John Doe", "last_name": "Smith", "email": "john.doe@example.com"}'
+```
+
+### Customer Data Fields
+- `name` (required): Customer's first name
+- `last_name` (required): Customer's last name  
+- `email` (required, unique): Customer's email address
 
 ## Running Tests
 
